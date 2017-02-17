@@ -1,0 +1,8 @@
+[core]
+	excludesfile = /Users/tomnullet/.gitignore_global
+[user]
+	name = Tom Nullet
+[alias]
+	st = status
+	co = checkout
+	br = branch
