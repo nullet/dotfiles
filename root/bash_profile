@@ -85,6 +85,8 @@ parse_git_branch() {
 ### ALIASES (aliasi?) ###
 alias ~="cd ~"
 alias ..="cd ../"
+alias ls="ls -lah"
+alias lst="ls -laht"
 
 
 # Setting PATH for Python 2.7
