@@ -1,10 +1,9 @@
-set nocompatible              " required
-filetype off                  " required
+set nocompatible      " required
+filetype off          " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
@@ -13,7 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/indentpython.vim'
+" Plugin 'vim-scripts/indentpython.vim'
 Plugin 'Bundle'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'                                                              
@@ -22,10 +21,20 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+
+
+" tabbing
+set expandtab  	      " tabs to spaces
+
+" search
+set hlsearch          " highlight search
+set ignorecase 	      " case-insensitive matching w/ search
+set incsearch         " incremental highlighting in search
+set smartcase         " case-sensitive w/ capital letter
 
 "split navigations
 nnoremap <C-J> <C-W><C-J>
@@ -38,7 +47,7 @@ set foldmethod=indent
 set foldlevel=99
 
 " Enable folding with the spacebar
-nnoremap <space> za
+" nnoremap <space> za
 
 " Flagging Unnecessary Whitespace
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
@@ -55,7 +64,7 @@ if 'VIRTUAL_ENV' in os.environ:
   execfile(activate_this, dict(__file__=activate_this))
 EOF
 
-" Make Code Pretty
+" python syntax highlighting
 let python_highlight_all=1
 syntax on
 
@@ -71,11 +80,12 @@ set clipboard=unnamed
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" Allow for deleting empty lines
+" More powerful backspace
 :set backspace=indent,eol,start
 
-" Enable Solarized Theme
+" Enable Solorized Theme
 syntax enable
 set background=dark
 " colorscheme solarized
+
 
