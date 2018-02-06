@@ -93,5 +93,5 @@ alias lst="ls -laht"
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
-export PS1="\u:$Cyan\h $Purple\A $Yellow\w$Green\$(parse_git_branch) \n$ResetColor_Off\$ "
+export PS1="\u:$Purple\h $Cyan\A $Yellow\w$Green\$(parse_git_branch) \n$ResetColor_Off\$ "
 ssh-add -K ~/.ssh/id_rsa
